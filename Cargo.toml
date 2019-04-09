@@ -1,0 +1,25 @@
+[package]
+name = "pipes-marking"
+version = "0.1.0"
+authors = ["Nik Kataev <nkataev@ics.perm.ru>"]
+edition = "2018"
+
+[dependencies]
+exonum = { version = "0.11.0" }
+exonum-derive = { version = "0.11.0" }
+exonum-configuration = { version = "0.11.0" }
+serde = "1.0.10"
+serde_derive = "1.0.10"
+failure = "0.1.5"
+protobuf = "2.4.0"
+
+[dev-dependencies]
+exonum-testkit = { version = "0.11.0" }
+pretty_assertions = "0.5.1"
+
+[build-dependencies]
+exonum-build = { version = "0.11.0" }
+
+[features]
+default = ["with-serde"]
+with-serde = []

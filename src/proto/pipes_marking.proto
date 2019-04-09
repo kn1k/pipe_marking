@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package pipes_marking;
+
+import "helpers.proto";
+
+// Pipe type information stored in the database
+message PipeType {
+    // `PublicKey` of pipe type.
+    exonum.PublicKey pipe_type = 1;
+    // UID of pipe producer
+    exonum.PublicKey pipe_producer = 2;
+    // Pipe type id from 1C
+    string pipe_type_id_1c = 3;
+    // Pipe type name from 1c
+    string pipe_type_name_1c = 4;
+    // Pipe type name from GOST
+    string pipe_type_name_gost = 5;
+    // Weight of 1 meter of pipe
+    uint32 weight_meter_of_pipe = 6;
+    // Certificate of conformity number
+    string certificate_number = 7;
+    // Certificate of conformity status TODO change type?
+    string certificate_status = 8;
+    // SDR
+    string sdr = 9;
+    // Outer diameter
+    uint32 outer_diameter = 10;
+    // DN
+    uint32 dn = 11;
+    // PU
+    uint32 pu = 12;
+    // Check result
+    string check_result = 13;
+    // Length of the transactions history.
+    uint64 history_len = 14;
+    // `Hash` of the transactions history.
+    exonum.Hash history_hash = 15;
+}
+
+// Create pipe type transaction
+message CreatePipeType {
+    // `PublicKey` of pipe type.
+    exonum.PublicKey pipe_type = 1;
+    // UID of pipe producer
+    exonum.PublicKey pipe_producer = 2;
+    // Pipe type id from 1C
+    string pipe_type_id_1c = 3;
+    // Pipe type name from 1c
+    string pipe_type_name_1c = 4;
+    // Pipe type name from GOST
+    string pipe_type_name_gost = 5;
+    // Weight of 1 meter of pipe
+    uint32 weight_meter_of_pipe = 6;
+    // Certificate of conformity number
+    string certificate_number = 7;
+    // Certificate of conformity status TODO change type?
+    string certificate_status = 8;
+    // SDR
+    string sdr = 9;
+    // Outer diameter
+    uint32 outer_diameter = 10;
+    // DN
+    uint32 dn = 11;
+    // PU
+    uint32 pu = 12;
+    // Check result
+    string check_result = 13;
+}
